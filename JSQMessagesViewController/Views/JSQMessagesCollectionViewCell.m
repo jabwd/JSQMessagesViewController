@@ -60,7 +60,7 @@ static NSMutableSet *jsqMessagesCollectionViewCellActions = nil;
 
 @property (assign, nonatomic) UIEdgeInsets textViewFrameInsets;
 
-@property (assign, nonatomic) CGSize avatarViewSize;
+//@property (assign, nonatomic) CGSize avatarViewSize;
 
 @property (weak, nonatomic, readwrite) UITapGestureRecognizer *tapGestureRecognizer;
 
