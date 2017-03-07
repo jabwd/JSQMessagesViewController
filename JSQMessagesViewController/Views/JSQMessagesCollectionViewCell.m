@@ -41,6 +41,7 @@ static NSMutableSet *jsqMessagesCollectionViewCellActions = nil;
 
 @property (weak, nonatomic) IBOutlet UIImageView *avatarImageView;
 @property (weak, nonatomic) IBOutlet UIView *avatarContainerView;
+@property (weak, nonatomic) IBOutlet UIImageView *messageStatusImageView;
 
 @property (weak, nonatomic) IBOutlet UIButton *accessoryButton;
 

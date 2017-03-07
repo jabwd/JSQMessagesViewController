@@ -482,6 +482,10 @@ static void JSQInstallWorkaroundForSheetPresentationIssue26295020(void) {
     return nil;
 }
 
+- (UIImage *)collectionView:(JSQMessagesCollectionView *)collectionView messageStatusImageAtIndexPath:(NSIndexPath *)indexPath {
+	return nil;
+}
+
 #pragma mark - Collection view data source
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
@@ -521,6 +525,7 @@ static void JSQInstallWorkaroundForSheetPresentationIssue26295020(void) {
         id<JSQMessageBubbleImageDataSource> bubbleImageDataSource = [collectionView.dataSource collectionView:collectionView messageBubbleImageDataForItemAtIndexPath:indexPath];
         cell.messageBubbleImageView.image = [bubbleImageDataSource messageBubbleImage];
         cell.messageBubbleImageView.highlightedImage = [bubbleImageDataSource messageBubbleHighlightedImage];
+		cell.messageStatusImageView.image = [collectionView.dataSource collectionView:collectionView messageStatusImageAtIndexPath:indexPath];
     }
     else {
         id<JSQMessageMediaData> messageMedia = [messageItem media];

@@ -151,6 +151,8 @@ NS_ASSUME_NONNULL_BEGIN
  */
 @property (weak, nonatomic, readonly, nullable) UIImageView *avatarImageView;
 
+@property (weak, nonatomic, readonly, nullable) UIImageView *messageStatusImageView;
+
 @property (assign, nonatomic) CGSize avatarViewSize;
 
 /**

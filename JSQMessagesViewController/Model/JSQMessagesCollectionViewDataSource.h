@@ -153,6 +153,8 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (nullable NSAttributedString *)collectionView:(JSQMessagesCollectionView *)collectionView attributedTextForCellBottomLabelAtIndexPath:(NSIndexPath *)indexPath;
 
+- (nullable UIImage *)collectionView:(JSQMessagesCollectionView *)collectionView messageStatusImageAtIndexPath:(NSIndexPath *)indexPath;
+
 @end
 
 NS_ASSUME_NONNULL_END
