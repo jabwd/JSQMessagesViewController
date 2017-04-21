@@ -525,13 +525,13 @@ static void JSQInstallWorkaroundForSheetPresentationIssue26295020(void) {
         id<JSQMessageBubbleImageDataSource> bubbleImageDataSource = [collectionView.dataSource collectionView:collectionView messageBubbleImageDataForItemAtIndexPath:indexPath];
         cell.messageBubbleImageView.image = [bubbleImageDataSource messageBubbleImage];
         cell.messageBubbleImageView.highlightedImage = [bubbleImageDataSource messageBubbleHighlightedImage];
-		cell.messageStatusImageView.image = [collectionView.dataSource collectionView:collectionView messageStatusImageAtIndexPath:indexPath];
     }
     else {
         id<JSQMessageMediaData> messageMedia = [messageItem media];
         cell.mediaView = [messageMedia mediaView] ?: [messageMedia mediaPlaceholderView];
         NSParameterAssert(cell.mediaView != nil);
     }
+	cell.messageStatusImageView.image = [collectionView.dataSource collectionView:collectionView messageStatusImageAtIndexPath:indexPath];
 
     BOOL needsAvatar = YES;
     if (isOutgoingMessage && CGSizeEqualToSize(collectionView.collectionViewLayout.outgoingAvatarViewSize, CGSizeZero)) {
