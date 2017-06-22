@@ -152,6 +152,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (weak, nonatomic, readonly, nullable) UIImageView *avatarImageView;
 
 @property (weak, nonatomic, readonly, nullable) UIImageView *messageStatusImageView;
+@property (weak, nonatomic, readonly, nullable) UILabel *timestampLabel;
 
 @property (assign, nonatomic) CGSize avatarViewSize;
 

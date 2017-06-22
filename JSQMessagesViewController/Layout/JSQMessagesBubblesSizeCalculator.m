@@ -137,7 +137,7 @@
     }
 
     [self.cache setObject:[NSValue valueWithCGSize:finalSize] forKey:@([messageData messageHash])];
-
+	
     return finalSize;
 }
 
