@@ -32,6 +32,8 @@
 
 @implementation JSQMessagesComposerTextView
 
+@dynamic pasteDelegate;
+
 #pragma mark - Initialization
 
 - (void)jsq_configureTextView
