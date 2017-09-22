@@ -221,6 +221,8 @@ NS_ASSUME_NONNULL_BEGIN
  */
 + (void)registerMenuAction:(SEL)action;
 
+- (void)updateTextView;
+
 @end
 
 NS_ASSUME_NONNULL_END

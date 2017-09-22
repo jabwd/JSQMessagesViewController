@@ -334,6 +334,10 @@ static NSMutableSet *jsqMessagesCollectionViewCellActions = nil;
     [self jsq_updateConstraint:self.textViewMarginHorizontalSpaceConstraint withConstant:textViewFrameInsets.left];
 }
 
+- (void)updateTextView {
+	[self jsq_updateConstraint:self.textViewBottomVerticalSpaceConstraint withConstant:0];
+}
+
 - (void)setMediaView:(UIView *)mediaView
 {
     [self.messageBubbleImageView removeFromSuperview];

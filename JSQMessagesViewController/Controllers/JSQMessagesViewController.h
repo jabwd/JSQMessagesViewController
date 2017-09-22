@@ -109,6 +109,25 @@ NS_ASSUME_NONNULL_BEGIN
  */
 @property (copy, nonatomic) NSString *incomingCellIdentifier;
 
+
+/**
+ *  The collection view cell identifier to use for dequeuing notification message collection view cells
+ *  in the collectionView for displaying chat notifications.
+ *
+ *  @discussion This cell identifier is used for incoming text message data items.
+ *  The default value is the string returned by `[JSQMessagesCollectionViewCellNotification cellReuseIdentifier]`.
+ *  This value must not be `nil`.
+ *
+ *  @see JSQMessagesCollectionViewCellNotification.
+ *
+ *  @warning Overriding this property's default value is *not* recommended.
+ *  You should only override this property's default value if you are proividing your own cell prototypes.
+ *  These prototypes must be registered with the collectionView for reuse and you are then responsible for
+ *  completely overriding many delegate and data source methods for the collectionView,
+ *  including `collectionView:cellForItemAtIndexPath:`.
+ */
+@property (copy, nonatomic) NSString *notificationCellIdentifier;
+
 /**
  *  The collection view cell identifier to use for dequeuing incoming message collection view cells 
  *  in the collectionView for media messages.

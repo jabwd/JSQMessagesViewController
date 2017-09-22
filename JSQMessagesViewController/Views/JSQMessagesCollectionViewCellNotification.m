@@ -10,8 +10,10 @@
 
 @implementation JSQMessagesCollectionViewCellNotification
 
-- (void)awakeFromNib {
-    [super awakeFromNib];
+- (void)applyLayoutAttributes:(UICollectionViewLayoutAttributes *)layoutAttributes {
+	[super applyLayoutAttributes:layoutAttributes];
+	
+	[self updateTextView];
 }
 
 @end

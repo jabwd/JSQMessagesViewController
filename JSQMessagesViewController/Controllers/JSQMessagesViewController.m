@@ -26,6 +26,7 @@
 
 #import "JSQMessagesCollectionViewCellIncoming.h"
 #import "JSQMessagesCollectionViewCellOutgoing.h"
+#import "JSQMessagesCollectionViewCellNotification.h"
 
 #import "JSQMessagesTypingIndicatorFooterView.h"
 #import "JSQMessagesLoadEarlierHeaderView.h"
@@ -168,6 +169,8 @@ static void JSQInstallWorkaroundForSheetPresentationIssue26295020(void) {
 
     self.incomingCellIdentifier = [JSQMessagesCollectionViewCellIncoming cellReuseIdentifier];
     self.incomingMediaCellIdentifier = [JSQMessagesCollectionViewCellIncoming mediaCellReuseIdentifier];
+	
+	self.notificationCellIdentifier = [JSQMessagesCollectionViewCellNotification cellReuseIdentifier];
 
     // NOTE: let this behavior be opt-in for now
     // [JSQMessagesCollectionViewCell registerMenuAction:@selector(delete:)];
@@ -430,6 +433,14 @@ static void JSQInstallWorkaroundForSheetPresentationIssue26295020(void) {
     return [messageSenderId isEqualToString:[self.collectionView.dataSource senderId]];
 }
 
+- (BOOL)isNotificationMessage:(id<JSQMessageData>)messageItem
+{
+	NSString *senderID = [messageItem senderId];
+	NSParameterAssert(senderID != nil);
+	
+	return [senderID isEqualToString:@"notification"];
+}
+
 #pragma mark - JSQMessages collection view data source
 
 - (NSString *)senderDisplayName
@@ -505,9 +516,13 @@ static void JSQInstallWorkaroundForSheetPresentationIssue26295020(void) {
 
     BOOL isOutgoingMessage = [self isOutgoingMessage:messageItem];
     BOOL isMediaMessage = [messageItem isMediaMessage];
+	BOOL isNotification = [self isNotificationMessage:messageItem];
 
     NSString *cellIdentifier = nil;
-    if (isMediaMessage) {
+	if (isNotification) {
+		cellIdentifier = self.notificationCellIdentifier;
+	}
+	else if (isMediaMessage) {
         cellIdentifier = isOutgoingMessage ? self.outgoingMediaCellIdentifier : self.incomingMediaCellIdentifier;
     }
     else {
