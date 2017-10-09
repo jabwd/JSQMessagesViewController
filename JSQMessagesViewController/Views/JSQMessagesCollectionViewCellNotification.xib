@@ -20,10 +20,10 @@
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XoQ-mr-t0w" customClass="JSQMessagesNotificationBackgroundView">
-                        <rect key="frame" x="50" y="0.0" width="389" height="134"/>
+                        <rect key="frame" x="30" y="0.0" width="429" height="134"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="This is a test notification!" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Bhi-mL-cGe" customClass="JSQMessagesCellTextView">
-                                <rect key="frame" x="0.0" y="0.0" width="389" height="134"/>
+                                <rect key="frame" x="0.0" y="0.0" width="429" height="134"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -40,9 +40,9 @@
                 </subviews>
             </view>
             <constraints>
-                <constraint firstItem="XoQ-mr-t0w" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="50" id="JHg-Aq-Rhp"/>
+                <constraint firstItem="XoQ-mr-t0w" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="30" id="JHg-Aq-Rhp"/>
                 <constraint firstItem="XoQ-mr-t0w" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="MIo-2w-upV"/>
-                <constraint firstAttribute="trailing" secondItem="XoQ-mr-t0w" secondAttribute="trailing" constant="50" id="j0V-2u-VUC"/>
+                <constraint firstAttribute="trailing" secondItem="XoQ-mr-t0w" secondAttribute="trailing" constant="30" id="j0V-2u-VUC"/>
                 <constraint firstItem="XoQ-mr-t0w" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="nTu-gU-60d"/>
                 <constraint firstItem="XoQ-mr-t0w" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="rwh-gJ-61K"/>
             </constraints>
@@ -53,7 +53,7 @@
                 <outlet property="textViewBottomVerticalSpaceConstraint" destination="Vw7-SQ-SRD" id="dEo-Rf-cVI"/>
                 <outlet property="textViewTopVerticalSpaceConstraint" destination="AGQ-Hn-ZeB" id="U95-en-5bk"/>
             </connections>
-            <point key="canvasLocation" x="-122" y="61"/>
+            <point key="canvasLocation" x="-122.5" y="61"/>
         </collectionViewCell>
     </objects>
 </document>
