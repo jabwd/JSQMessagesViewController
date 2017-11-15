@@ -13,7 +13,7 @@
 - (void)awakeFromNib {
 	[super awakeFromNib];
 	
-	self.backgroundColor = [UIColor colorWithWhite:0.8f alpha:1.0f];
+	self.backgroundColor = [UIColor colorWithWhite:0.85f alpha:1.0f];
 	
 	[self layer].cornerRadius = 5.0f;
 	[self layer].borderColor = [[UIColor colorWithWhite:1.0f alpha:1.0f] CGColor];
