@@ -13,10 +13,10 @@
 - (void)awakeFromNib {
 	[super awakeFromNib];
 	
-	self.backgroundColor = [UIColor colorWithWhite:0.85f alpha:1.0f];
+	self.backgroundColor = [UIColor colorWithWhite:0.95f alpha:1.0f];
 	
 	[self layer].cornerRadius = 5.0f;
-	[self layer].borderColor = [[UIColor colorWithWhite:1.0f alpha:1.0f] CGColor];
+	[self layer].borderColor = [[UIColor colorWithWhite:0.85f alpha:1.0f] CGColor];
 	[self layer].borderWidth = 1.0f;
 }
 
