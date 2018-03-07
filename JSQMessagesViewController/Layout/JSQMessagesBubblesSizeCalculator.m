@@ -122,6 +122,9 @@
                                                              context:nil];
 
         CGSize stringSize = CGRectIntegral(stringRect).size;
+		if( [[messageData text] length] == 1 ) {
+			stringSize.width += 10.0f;
+		}
 
         CGFloat verticalContainerInsets = layout.messageBubbleTextViewTextContainerInsets.top + layout.messageBubbleTextViewTextContainerInsets.bottom;
         CGFloat verticalFrameInsets = layout.messageBubbleTextViewFrameInsets.top + layout.messageBubbleTextViewFrameInsets.bottom;
